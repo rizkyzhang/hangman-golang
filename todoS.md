@@ -1,0 +1,2 @@
+- [ ] Implement random word generator
+- [ ] Fill char position for random word containing a letter that occur more than one time, like G in GOLANG
