@@ -14,55 +14,54 @@ import (
 func main() {
 	figures := [7]string{
 		`
-    +---+
-    0   |
-   /|\  |
-   / \  |
-      =====
-    `,
+  +---+
+  0   |
+ /|\  |
+ / \  |
+    =====
+  `,
 		`
-    +---+
-    0   |
-   /|\  |
-   /    |
-      =====
-    `,
+  +---+
+  0   |
+ /|\  |
+ /    |
+    =====
+  `,
 		`
-    +---+
-    0   |
-   /|\  |
-        |
-      =====
-    `,
+  +---+
+  0   |
+ /|\  |
+      |
+    =====
+  `,
 		`
-    +---+
-    0   |
-   /|   |
-        |
-      =====
-    `,
+  +---+
+  0   |
+ /|   |
+      |
+    =====
+  `,
 		`
-    +---+
-    0   |
-    |   |
-        |
-      =====
-    `,
+  +---+
+  0   |
+  |   |
+      |
+    =====
+  `,
 		`
-    +---+
-    0   |
-        |
-        |
-      =====
-    `,
-
+  +---+
+  0   |
+      |
+      |
+    =====
+  `,
 		`
-    +---+
-        |
-        |
-        |
-      =====
-      `,
+  +---+
+      |
+      |
+      |
+    =====
+  `,
 	}
 
 	life := 6
@@ -115,7 +114,7 @@ func main() {
 			continue
 		}
 
-		// Check if letter has been guesses before
+		// Check if letter has been guessed before
 		if strings.Contains(guesses, guess) {
 			fmt.Println("Letter has been guessed before")
 			continue
