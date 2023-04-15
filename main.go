@@ -4,11 +4,11 @@ import (
 	"bufio"
 	"fmt"
 	"log"
-	"math/rand"
 	"os"
 	"strings"
-	"time"
 	"unicode"
+
+	"github.com/brianvoe/gofakeit/v6"
 )
 
 func main() {
@@ -65,13 +65,7 @@ func main() {
 	}
 
 	life := 6
-
-	seedSecs := time.Now().Unix()
-	rand.Seed(seedSecs)
-	randIndex := rand.Intn(6)
-	randWords := [6]string{"ZOMBIE", "CAT", "CODING", "TOWN", "COMPUTER", "MACHINE"}
-	randWord := randWords[randIndex]
-
+	randWord := strings.ToUpper(gofakeit.Word())
 	correctLetters := strings.Split(strings.Repeat("_", len(randWord)), "")
 	var wrongGuesses []string
 	var guesses string
