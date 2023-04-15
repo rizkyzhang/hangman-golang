@@ -118,7 +118,13 @@ func main() {
 		// Check if letter is correct or wrong
 		if strings.Contains(randWord, guess) {
 			fmt.Println("Correct guess")
-			correctLetters[strings.Index(randWord, guess)] = guess
+
+			// Replace _ chars with correct letter
+			for i, char := range randWord {
+				if string(char) == guess {
+					correctLetters[i] = guess
+				}
+			}
 		} else {
 			fmt.Println("Wrong guess")
 			wrongGuesses = append(wrongGuesses, guess)
